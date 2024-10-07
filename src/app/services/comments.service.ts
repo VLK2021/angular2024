@@ -15,4 +15,8 @@ export class CommentsService {
   getAll(): Observable<IComments[]> {
     return this.http.get<IComments[]>(urls.comments.base);
   }
+
+  getById(id: string): Observable<IComments> {
+    return this.http.get<IComments>(urls.comments.base + '/' + id);
+  }
 }

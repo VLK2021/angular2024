@@ -3,13 +3,15 @@ import {IComments} from '../../interfaces/IComments';
 import {CommentsService} from '../../services/comments.service';
 import {CommentComponent} from '../comment/comment.component';
 import {NgForOf} from '@angular/common';
+import {RouterOutlet} from '@angular/router';
 
 @Component({
   selector: 'app-comments',
   standalone: true,
   imports: [
     CommentComponent,
-    NgForOf
+    NgForOf,
+    RouterOutlet
   ],
   templateUrl: './comments.component.html',
   styleUrl: './comments.component.css'

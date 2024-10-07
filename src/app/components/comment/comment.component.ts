@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {IComments} from '../../interfaces/IComments';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-comment',
@@ -12,4 +13,10 @@ export class CommentComponent {
   @Input()
   comment: IComments | undefined
 
+  constructor(private router:Router, private activatedRoute:ActivatedRoute) {
+  }
+
+  getDetails(): void {
+    this.router.navigate([this.comment?.id], {relativeTo: this.activatedRoute});
+  }
 }
