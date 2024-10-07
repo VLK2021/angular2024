@@ -11,16 +11,17 @@ import {CommentsService} from '../../services/comments.service';
   templateUrl: './comment-details.component.html',
   styleUrl: './comment-details.component.css'
 })
-export class CommentDetailsComponent implements OnInit{
+
+export class CommentDetailsComponent implements OnInit {
   comment: IComments | undefined
 
-  constructor(private commentService:CommentsService, private activatedRoute:ActivatedRoute) {
+  constructor(private commentService: CommentsService, private activatedRoute: ActivatedRoute) {
   }
+
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(({id}) => {
-      this.commentService.getById(id).subscribe(value => this.comment = value);
+      this.commentService.getById(id).subscribe(value => this.comment = value)
     })
   }
-
 }
