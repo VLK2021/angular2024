@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {IPost} from '../../interfaces/IPost';
 
 @Component({
@@ -12,4 +12,10 @@ export class PostComponent {
   @Input()
   post: IPost | undefined
 
+  @Output()
+  lift = new EventEmitter<IPost>();
+
+  details() {
+    this.lift.emit(this.post);
+  }
 }
