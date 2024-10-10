@@ -23,7 +23,6 @@ export class UserDetailsComponent implements OnInit{
         this.userService.getById(id).subscribe(value => this.userDetails = value)
       }
     })
-
   }
 
   ngOnInit(): void {
