@@ -17,7 +17,7 @@ li > a {
   font-size: 1.1rem;
 }
 
-li > a.active {
+li > a[class='active'] {
   color: red;
   text-decoration: underline;
 }

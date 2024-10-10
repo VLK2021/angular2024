@@ -3,8 +3,9 @@ import {NgForOf, NgIf} from '@angular/common';
 
 import {UserService} from '../../services/user.service';
 import {IUser} from '../../interfaces/IUser';
-import {UserComponent} from '../user/user.component';
+import {UserComponent} from '../../components/user/user.component';
 import {UserDetailsComponent} from '../user-details/user-details.component';
+import {RouterOutlet} from '@angular/router';
 
 @Component({
   selector: 'app-users',
@@ -13,7 +14,8 @@ import {UserDetailsComponent} from '../user-details/user-details.component';
     NgForOf,
     UserComponent,
     UserDetailsComponent,
-    NgIf
+    NgIf,
+    RouterOutlet
   ],
   templateUrl: './users.component.html',
   styleUrl: './users.component.css'
