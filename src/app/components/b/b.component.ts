@@ -15,14 +15,14 @@ export class BComponent {
   }
 
   inc() {
-    this.counterService.inc()
+    this.counterService.count.next(this.counterService.count.value + 1)
   }
 
   dec() {
-    this.counterService.dec()
+    this.counterService.count.next(this.counterService.count.value - 1)
   }
 
   reset() {
-    this.counterService.reset()
+    this.counterService.count.next(0)
   }
 }
