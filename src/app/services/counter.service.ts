@@ -8,5 +8,4 @@ export class CounterService {
 count = new BehaviorSubject<number>(0)
 
   constructor() { }
-
 }
