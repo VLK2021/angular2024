@@ -21,4 +21,10 @@ export class CarComponent {
   update(): void {
     this.carService.setCarForUpdate(this.car)
   }
+
+  delete(): void {
+    this.carService.delete(this.car.id).subscribe(() => {
+      this.carService.setTrigger()
+    })
+  }
 }

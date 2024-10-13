@@ -67,6 +67,10 @@ export class CarFormComponent implements OnInit {
   }
 
   update() {
-
+    this.carService.updateById(this.carForUpdate.id, this.form.value).subscribe(() => {
+      this.carService.setTrigger()
+      this.carService.setCarForUpdate(null)
+      this.form.reset()
+    })
   }
 }
