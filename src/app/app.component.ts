@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import {AComponent} from './components/a/a.component';
-import {BComponent} from './components/b/b.component';
+import {CarsComponent} from './components/cars/cars.component';
+import {CarFormComponent} from './components/car-form/car-form.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, AComponent, BComponent],
+  imports: [RouterOutlet, CarsComponent, CarFormComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
