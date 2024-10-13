@@ -11,7 +11,6 @@ import {CarService} from '../../services/car.service';
   styleUrl: './car.component.css'
 })
 
-
 export class CarComponent {
   @Input() car!: ICar;
 
