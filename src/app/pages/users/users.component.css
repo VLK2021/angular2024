@@ -1,0 +1,14 @@
+.users{
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 1rem;
+}
+
+.first{
+  width: 70%;
+}
+
+.second {
+  width: 30%;
+}

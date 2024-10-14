@@ -1,0 +1,23 @@
+.ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+}
+
+li > a {
+  color: snow;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+li > a[class='active'] {
+  color: red;
+  text-decoration: underline;
+}

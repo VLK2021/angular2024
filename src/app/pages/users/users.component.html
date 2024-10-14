@@ -1,0 +1,9 @@
+<div class="users">
+  <div class="first">
+    <app-user *ngFor="let user of users" [user]="user"></app-user>
+  </div>
+
+  <div class="second">
+    <router-outlet></router-outlet>
+  </div>
+</div>
