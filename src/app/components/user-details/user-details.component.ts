@@ -14,18 +14,22 @@ export class UserDetailsComponent implements OnInit{
   @Input()
   userDetails: UserInterfaces
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute, private userService: UserService) {
-    this.activatedRoute.params.subscribe(({id}) => {
-      this.userDetails = this.router.getCurrentNavigation()?.extras.state as UserInterfaces;
+  // constructor(private router: Router, private activatedRoute: ActivatedRoute, private userService: UserService) {
+  //   this.activatedRoute.params.subscribe(({id}) => {
+  //     this.userDetails = this.router.getCurrentNavigation()?.extras.state as UserInterfaces;
+  //
+  //     if(!this.userDetails) {
+  //       this.userService.getById(id).subscribe(value => this.userDetails = value)
+  //     }
+  //   })
+  //
+  // }
 
-      if(!this.userDetails) {
-        this.userService.getById(id).subscribe(value => this.userDetails = value)
-      }
-    })
-
+  constructor(private activatedRoute: ActivatedRoute) {
   }
 
   ngOnInit(): void {
+    this.activatedRoute.data.subscribe(({userData}) => this.userDetails = userData)
   }
 
 }

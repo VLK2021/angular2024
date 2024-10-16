@@ -3,6 +3,7 @@ import {MainLayoutComponent} from './layouts/main-layout/main-layout.component';
 import {UsersComponent} from './pages/users/users.component';
 import {UserDetailsComponent} from './components/user-details/user-details.component';
 import {PostsComponent} from './pages/posts/posts.component';
+import {userDetailsResolver} from './services/resolvers/user-details.resolver';
 
 export const routes: Routes = [
   {
@@ -10,7 +11,7 @@ export const routes: Routes = [
       {path: '', redirectTo: 'users', pathMatch: 'full'},
       {
         path: 'users', component: UsersComponent, children: [
-          {path: ':id', component: UserDetailsComponent}
+          {path: ':id', resolve: {userData: userDetailsResolver}, component: UserDetailsComponent}
         ]
       },
       {path: 'posts', component: PostsComponent},
